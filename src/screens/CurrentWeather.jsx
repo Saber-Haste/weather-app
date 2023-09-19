@@ -36,10 +36,6 @@ const styles = StyleSheet.create({
     
     
   },
-  temp: {
-    color: "black",
-    fontSize: 50
-  },
   feels: {
     fontSize: 30,
     color: "black"
@@ -64,7 +60,11 @@ const styles = StyleSheet.create({
   },
   message: {
     fontSize: 30
-  }
+  },
+  temp: {
+    color: "black",
+    fontSize: 50
+  },
 
 })
 export default CurrentWeather
