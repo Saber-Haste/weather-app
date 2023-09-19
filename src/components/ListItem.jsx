@@ -1,17 +1,18 @@
 /* eslint-disable react/prop-types */
-import React from "react";
-import { View,StyleSheet,Text } from "react-native";
+import React from "react"
+import { View,StyleSheet,Text } from "react-native"
 import Feather from "react-native-vector-icons/Feather"
 
 
 const ListItem = (props) => {
   const {dt_txt,temp_min,temp_max} = props
+  const {date,temp,item} = styles
   return (
-      <View style={styles.item}>
+      <View style={item}>
           <Feather name={"sun"} size={50} color={"white"}/>
-          <Text style={styles.date}>{dt_txt}</Text>
-          <Text style={styles.temp}>{temp_min}</Text>
-          <Text style={styles.temp}>{temp_max}</Text>
+          <Text style={date}>{dt_txt}</Text>
+          <Text style={temp}>{temp_min}</Text>
+          <Text style={temp}>{temp_max}</Text>
       </View>
   )
 }

@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 import React from "react"
-import { View,StyleSheet,SafeAreaView,Text,FlatList } from "react-native" 
-import Feather from "react-native-vector-icons/Feather"
+import { StyleSheet,SafeAreaView,Text,FlatList } from "react-native" 
 import { StatusBar } from "react-native"
 import { ImageBackground } from "react-native"
-import ListItem from "./src/components/Listitem"
+import ListItem from "../components/ListItem"
+
 
 
 const  DATA = [
@@ -46,19 +46,6 @@ const  DATA = [
       ]
   }
 ]
-
-// const ListItem = (props) => {
-//   const {dt_txt,temp_min,temp_max} = props
-//   return (
-//       <View style={styles.item}>
-//           <Feather name={"sun"} size={50} color={"white"}/>
-//           <Text style={styles.date}>{dt_txt}</Text>
-//           <Text style={styles.temp}>{temp_min}</Text>
-//           <Text style={styles.temp}>{temp_max}</Text>
-//       </View>
-//   )
-
-// }
 
 
 
@@ -107,22 +94,7 @@ const styles = StyleSheet.create({
       color:"white",
       fontSize: 15
     },
-    temp : {
-      color: "white",
-      fontSize: 18
-    },
-    item: {
-      
-      padding: 20,
-      marginVertical: 8,
-      marginHorizontal: 16,
-      justifyContent: "space-around",
-      flexDirection: "row",
-      alignItems: "center",
-      borderWidth: 5,
-      backgroundColor: "pink",
 
-
-    }
+  
 })
 export default UpcommingWeather
