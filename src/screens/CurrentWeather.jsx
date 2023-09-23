@@ -3,26 +3,27 @@ import {View, Text, StyleSheet, SafeAreaView} from 'react-native'
 import Feather from "react-native-vector-icons/Feather"
 import RowText from '../components/RowText'
 const CurrentWeather = () => {
+  const {wrapper,container,temp,feels,highlow,highlowwrapper,bodyWrapper,discription,message} = styles
   return (
-    <SafeAreaView style={styles.wrapper}>
-      <View style={styles.container}>
+    <SafeAreaView style={wrapper}>
+      <View style={container}>
         <Feather name="sun" size={100} color={"black"} />
-        <Text style={styles.temp}>24</Text>
-        <Text style={styles.feels}>Feels like 20</Text>       
+        <Text style={temp}>24</Text>
+        <Text style={feels}>Feels like 20</Text>       
         <RowText
           messageOne = {"High:8"}
           messageTwo = {"Low:5"}
-          containerStyles = {styles.highlowwrapper}
-          messageOneStyles = {styles.highlow}
-          messageTwoStyles = {styles.highlow}
+          containerStyles = {highlowwrapper}
+          messageOneStyles = {highlow}
+          messageTwoStyles = {highlow}
         />
       </View>
       <RowText
         messageOne = {"its Sunny"}
         messageTwo = {"its perfect tshirt weather"}
-        containerStyles = {styles.bodyWrapper}
-        messageOneStyles = {styles.discription}
-        messageTwoStyles = {styles.message}
+        containerStyles = {bodyWrapper}
+        messageOneStyles = {discription}
+        messageTwoStyles = {message}
       />
     </SafeAreaView>
   )
