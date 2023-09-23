@@ -5,18 +5,22 @@ import { View,Text,StyleSheet } from "react-native";
 
 const IconText = (props) => {
     const {iconName,iconColor,bodyText,bodyTextStyles} = props
+    const {textTheme,container} = styles
     return(
-        <View>
+        <View style={container}>
             <Feather
             name={iconName} size={50} color={iconColor}/>
-            <Text style={[styles.textTheme,bodyTextStyles]}>{bodyText}</Text>
-        </View>
+            <Text style={[textTheme,bodyTextStyles]}>{bodyText}</Text>
+         </View>
         )
 }
 
 const styles = StyleSheet.create({
     textTheme: {
         fontWeight:"bold",
+    },
+    container:{
+        alignItems:"center",
     }
 })
 export default IconText

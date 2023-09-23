@@ -1,7 +1,7 @@
 import React from 'react'
 import {View, Text, StyleSheet, SafeAreaView} from 'react-native'
 import Feather from "react-native-vector-icons/Feather"
-
+import RowText from '../components/RowText'
 const CurrentWeather = () => {
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -9,15 +9,21 @@ const CurrentWeather = () => {
         <Feather name="sun" size={100} color={"black"} />
         <Text style={styles.temp}>24</Text>
         <Text style={styles.feels}>Feels like 20</Text>       
-        <View style={styles.highlowwrapper}>
-          <Text style={styles.highlow}>High: 26</Text>
-          <Text style={styles.highlow}> Low: 18</Text>
-        </View>
+        <RowText
+          messageOne = {"High:8"}
+          messageTwo = {"Low:5"}
+          containerStyles = {styles.highlowwrapper}
+          messageOneStyles = {styles.highlow}
+          messageTwoStyles = {styles.highlow}
+        />
       </View>
-      <View style={styles.bodyWrapper}>
-        <Text style={styles.discription}>Its sunny</Text>
-        <Text style={styles.message}>Its perfect t-shirt weather</Text>
-      </View>
+      <RowText
+        messageOne = {"its Sunny"}
+        messageTwo = {"its perfect tshirt weather"}
+        containerStyles = {styles.bodyWrapper}
+        messageOneStyles = {styles.discription}
+        messageTwoStyles = {styles.message}
+      />
     </SafeAreaView>
   )
 }
@@ -53,7 +59,7 @@ const styles = StyleSheet.create({
     paddingLeft: 25,
     marginBottom: 40,
 
-    //backgroundColor: "yellow" //to check view
+    // backgroundColor: "yellow" //to check view
   },
   discription: {
     fontSize: 48
